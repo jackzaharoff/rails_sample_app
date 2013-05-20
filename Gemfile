@@ -23,7 +23,9 @@ end
 gem 'jquery-rails'
 
 group :test do
+  #gem 'capybara', '1.1.4'
   gem 'capybara', '2.1.0'
+  gem "selenium-webdriver", "~> 2.32.1"
 end
 
 group :production do
