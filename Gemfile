@@ -3,9 +3,19 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg', '0.15.1'
 
-group :development, :test do
-  #gem 'sqlite3', '1.3.7'
+group :development do
   gem 'rspec-rails', '2.13.2'
+  gem "guard-rspec", "3.0.0"
+end
+
+group :test do
+  #gem 'capybara', '1.1.4'
+  gem 'capybara', '2.1.0'
+  gem "selenium-webdriver", "2.32.1"
+  gem "rb-inotify", "0.9.0"
+  gem "libnotify", "0.8.0"
+  gem "spork", "0.9.2"
+  gem "guard-spork", "1.5.0"
 end
 
 # Gems used only for assets and not required
@@ -20,11 +30,7 @@ end
 
 gem 'jquery-rails'
 
-group :test do
-  #gem 'capybara', '1.1.4'
-  gem 'capybara', '2.1.0'
-  gem "selenium-webdriver", "~> 2.32.1"
-end
+
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'

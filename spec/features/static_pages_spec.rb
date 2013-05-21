@@ -34,6 +34,7 @@ describe "StaticPages" do
       page.should have_title ("#{base_title} | About Us")
     end
   end
+
   describe "Contact page" do
     it "should have the h1 'Contact Page'" do
       visit '/static_pages/contact'
