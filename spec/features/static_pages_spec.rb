@@ -22,4 +22,16 @@ describe "StaticPages" do
     it { should have_selector('h1', text: 'Contact Page') }
     it { should have_title(full_title("Contact Page")) }
   end
+  it "should have the right links on the layout" do
+    visit root_path
+    click_link "About"
+    page.should have_title(full_title('About Us'))
+    click_link "Help"
+    page.should have_title(full_title('Help'))
+    click_link "Contact"
+    page.should have_title(full_title('Contact'))
+    click_link 'Home'
+    click_link 'Sign up now!'
+    page.should have_title(full_title('Sign up'))
+  end
 end
