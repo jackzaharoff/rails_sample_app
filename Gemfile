@@ -3,10 +3,17 @@ source 'https://rubygems.org'
 gem 'rails', '3.2.13'
 gem 'pg', '0.15.1'
 gem "bootstrap-sass", "2.3.1.0"
+gem 'faker', '1.1.2'
+gem 'will_paginate', '3.0.4'
+gem 'bootstrap-will_paginate', '0.0.9'
+gem 'jquery-rails', '2.2.1'
 
-group :development do
+group :development, :test do
   gem 'rspec-rails', '2.13.2'
   gem "guard-rspec", "3.0.0"
+  gem "guard-spork", "1.5.0"
+  gem 'childprocess', '0.3.9'
+  gem "spork", "0.9.2"
 end
 
 group :test do
@@ -15,8 +22,9 @@ group :test do
   gem "selenium-webdriver", "2.32.1"
   gem "rb-inotify", "0.9.0"
   gem "libnotify", "0.8.0"
-  gem "spork", "0.9.2"
-  gem "guard-spork", "1.5.0"
+  gem 'factory_girl_rails', '4.1.0'
+  gem 'cucumber-rails', '1.2.1', :require => false
+  gem 'database_cleaner', '0.7.0'
 end
 
 # Gems used only for assets and not required
@@ -28,10 +36,6 @@ group :assets do
   gem 'therubyracer', :platforms => :ruby
   gem 'uglifier', '>= 1.0.3'
 end
-
-gem 'jquery-rails'
-
-
 
 # To use ActiveModel has_secure_password
 gem 'bcrypt-ruby', '~> 3.0.0'
