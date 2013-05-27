@@ -1,4 +1,8 @@
 @import 'bootstrap';
+body {
+  padding-top: 60px;
+}
+@import 'bootstrap-responsive';
 
 /* mixins,variables, etc. */
 
@@ -17,9 +21,7 @@ html {
   overflow: scroll;
 }
 
-body {
-  padding-top: 60px;
-}
+
 
 section {
   overflow: auto;
@@ -145,7 +147,15 @@ aside {
 
 /* forms */
 
-input, textarea, select, .undeditable-input {
+input, select, .undeditable-input {
+  border: 1px solid #bbb;
+  width: 100%;
+  padding: 10px;
+  height: auto;
+  margin-bottom: 15px;
+}
+
+textarea {
   border: 1px solid #bbb;
   width: 100%;
   padding: 10px;
@@ -153,7 +163,6 @@ input, textarea, select, .undeditable-input {
   margin-bottom: 15px;
   @include box_sizing;
 }
-
 #error_explanation {
   color: #f00;
   ul {
